@@ -6,6 +6,10 @@
 ![Jupyter](https://img.shields.io/badge/Jupyter-Notebooks-F37626?logo=jupyter&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-Modelling-F7931E?logo=scikitlearn&logoColor=white)
 
+# Contributeurs: 
+**Christopher Brule | Romain Deleris | Augustin Traissac | Corentin Brandam**
+
+
 Projet de Machine Learning autour d'un jeu de données synthétique de santé cardiovasculaire.  
 L'objectif est de construire, comparer et interpréter plusieurs modèles supervisés sur deux tâches complémentaires :
 
@@ -26,7 +30,6 @@ Le projet combine analyse exploratoire, préparation des données, modélisation
 - [Données](#données)
 - [Méthodologie](#méthodologie)
 - [Modèles étudiés](#modèles-étudiés)
-- [Reproduire le projet](#reproduire-le-projet)
 - [Lecture conseillée](#lecture-conseillée)
 - [Points forts du projet](#points-forts-du-projet)
 - [Limites et pistes d'amélioration](#limites-et-pistes-damélioration)
@@ -89,40 +92,19 @@ La régression donne une conclusion plus nette : les modèles linéaires suffise
 ```text
 ML-project/
 ├── README.md
-├── RELECTURE_notebook_final.md
-├── renv.lock
-├── divers/
-│   ├── healthcare_synthetic_data.csv
-│   ├── ML-Project-4MA-2526.pdf
-│   └── supports de cours et documents PDF
-├── notebook_finaux/
-│   └── notebook_final_python.ipynb
-├── notebook finaux/
-│   ├── notebook_final_python.ipynb
-│   ├── notebook_final_R.ipynb
-│   ├── Slides_oral.ipynb
-│   ├── outputs_python/
-│   └── outputs_R/
-├── analyses_python/
-│   ├── Analyse_exploratoire.ipynb
-│   ├── Analyse_exploratoire_Chris.ipynb
-│   ├── Reg_Lin.ipynb
-│   ├── kNN_SVM_gus.ipynb
-│   ├── CART_AgrDMod_python_gus.ipynb
-│   ├── CART_AgrDMod_python_gus_cholesterol.ipynb
-│   ├── réseaux_neurones.ipynb
-│   └── contingence.ipynb
-└── analyses_R/
-    └── fichier_Romain.ipynb
+├── notebook_Python.ipynb
+├── notebook_R.ipynb
+├── Slides_Oral
+├── healthcare_synthetic_data
+
+
 ```
 
 Le notebook principal à lire est :
 
 ```text
-notebook_finaux/notebook_final_python.ipynb
+notebook_Python.ipynb
 ```
-
-Les dossiers `analyses_python/` et `analyses_R/` gardent les analyses intermédiaires utilisées pendant la construction du projet.
 
 ---
 
@@ -131,7 +113,7 @@ Les dossiers `analyses_python/` et `analyses_R/` gardent les analyses intermédi
 Fichier utilisé :
 
 ```text
-divers/healthcare_synthetic_data.csv
+healthcare_synthetic_data.csv
 ```
 
 Variables principales :
@@ -215,66 +197,14 @@ Le projet suit une démarche complète :
 
 ---
 
-## Reproduire le projet
-
-### 1. Cloner le dépôt
-
-```bash
-git clone <url-du-repo>
-cd ML-project
-```
-
-### 2. Créer un environnement Python
-
-Linux/macOS :
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-```
-
-Windows PowerShell :
-
-```powershell
-python -m venv .venv
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-.\.venv\Scripts\Activate.ps1
-```
-
-### 3. Installer les dépendances Python
-
-```bash
-pip install numpy pandas matplotlib seaborn scipy scikit-learn jupyter
-```
-
-### 4. Lancer le notebook principal
-
-```bash
-jupyter notebook notebook_finaux/notebook_final_python.ipynb
-```
-
-### 5. Option R
-
-Le dépôt contient un `renv.lock` pour l'environnement R. Pour restaurer l'environnement R depuis R :
-
-```r
-install.packages("renv")
-renv::restore()
-```
-
-Selon l'environnement local, les notebooks R peuvent nécessiter des packages complémentaires comme `tidyverse`, `ggplot2`, `FactoMineR`, `factoextra`, `glmnet`, `pROC`, `ROCR` ou `IRkernel`.
-
----
-
 ## Lecture conseillée
 
 Pour comprendre le projet rapidement :
 
 1. Lire ce README pour avoir la vue globale.
-2. Ouvrir `notebook_finaux/notebook_final_python.ipynb`.
+2. Ouvrir `notebook_python.ipynb`.
 3. Parcourir l'introduction, la synthèse exploratoire, puis les deux conclusions de modélisation.
-4. Utiliser les notebooks de `analyses_python/` pour retrouver les essais détaillés par famille de modèles.
-5. Ouvrir `notebook finaux/Slides_oral.ipynb` pour retrouver le plan de présentation orale.
+4. Ouvrir `Slides_oral` pour retrouver le plan de présentation orale.
 
 ---
 
